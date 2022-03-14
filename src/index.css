@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#nav-ul{
+  display: flex;
+  gap: 10px;
+  border: 3px solid green;
+  list-style: none;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid red;
+}
+#display-food-items{
+  border: 3px solid black;
+  display: grid;
+  min-width: none;
+  max-width: 500px;
+  gap: 20px;
+  padding: 10px;
+  margin: 10px;
+  align-self: center;
+}
+.display-item{
+  border: 3px solid orange;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr minmax(50px, 100px);
+}
+.display-item-left{
+  border: 3px solid red;
+}
+.display-item-right{
+  border: 3px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#shop-page{
+  border: 5px solid gold;
+  display: flex;
+  flex-direction: column;
+  
+}
+.item-container {
+  border: 2px solid black;
+  margin: 15px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 40px 1fr 50px;
+  
+}
+#display-cart{
+  border: 5px solid green;
+  max-width: 600px;
+  
+}
+#display-cart-header{
+  border: 5px solid goldenrod;
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+}
+.individual-price{
+  text-align: right;
 }
