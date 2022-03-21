@@ -3,3 +3,8 @@
   padding: 0px;
   box-sizing: border-box;
 }
+header {
+  border: 3px solid deeppink;
+  display: flex;
+  justify-content: space-evenly;
+}
