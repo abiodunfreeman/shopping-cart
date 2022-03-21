@@ -9,7 +9,6 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<Shop />} />
         <Route path="/home" element={<Home />} />

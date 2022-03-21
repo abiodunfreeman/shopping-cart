@@ -1,6 +1,6 @@
 import Cart from "./Cart";
 import DisplayItems from "./DisplayItems";
-
+import Header from "./Header";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -65,15 +65,18 @@ export default function Shop(props) {
     });
   }
   return (
-    <section id="shop">
-      <DisplayItems onAddItem={onAddItem} />
-      <Cart
-        onSubtractItem={onSubtractItem}
-        onAddItem={onAddItem}
-        cart={cart}
-        total={total}
-        handleIncrement={handleIncrement}
-      />
-    </section>
+    <div>
+      <Header cart={cart} />
+      <section id="shop">
+        <DisplayItems onAddItem={onAddItem} />
+        <Cart
+          onSubtractItem={onSubtractItem}
+          onAddItem={onAddItem}
+          cart={cart}
+          total={total}
+          handleIncrement={handleIncrement}
+        />
+      </section>
+    </div>
   );
 }
