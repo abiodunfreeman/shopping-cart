@@ -41,7 +41,7 @@ export default function Shop(props) {
   function onSubtractItem(item) {
     console.log(item.quantity);
     if (item.quantity === 1) {
-      return;
+      setCart((prevCart) => prevCart.filter((x) => x.name !== item.name));
     }
     setCart((prevCart) =>
       prevCart.map((x) =>
