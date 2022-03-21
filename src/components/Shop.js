@@ -7,6 +7,13 @@ import { useEffect } from "react";
 export default function Shop(props) {
   const [cart, setCart] = useState([
     {
+      name: "Test Emerald",
+      price: "400",
+      quantity: 1,
+      src:
+        "https://media.istockphoto.com/photos/green-round-cut-emerald-picture-id158282939?k=20&m=158282939&s=612x612&w=0&h=VGVoivLLuwlWxoxt3G7wWJhLiZtltzKmr94NVr44i5w="
+    },
+    {
       name: "Test Crystal",
       price: "300",
       quantity: 1,
@@ -28,6 +35,12 @@ export default function Shop(props) {
 
   function handleIncrement(item) {
     console.log(item);
+    const indexOfItem = cart.indexOf(item);
+    console.log(indexOfItem);
+    setCart((prevCart) => {
+      prevCart[indexOfItem].quantity++;
+      return [...prevCart];
+    });
   }
   return (
     <section id="shop">
