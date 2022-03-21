@@ -9,9 +9,7 @@ export default function DisplayItems(props) {
         <h1>{crystal.name}</h1>
         <h2>${crystal.price}</h2>
         <h3>{crystal.rarity}</h3>
-        <button onClick={() => props.handleAddToCart(crystal)}>
-          Add to Cart
-        </button>
+        <button onClick={() => props.onAddItem(crystal)}>Add to Cart</button>
       </div>
     );
   });

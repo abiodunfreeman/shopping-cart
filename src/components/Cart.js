@@ -9,9 +9,9 @@ export default function Cart(props) {
           <h3>{item.name}</h3>
           <h3>{item.price * item.quantity}</h3>
           <div className="item-quan">
-            <button>-</button>
+            <button onClick={() => props.onSubtractItem(item)}>-</button>
             <h3>{item.quantity}</h3>
-            <button onClick={() => props.handleIncrement(item)}>+</button>
+            <button onClick={() => props.onAddItem(item)}>+</button>
           </div>
         </div>
       </div>
@@ -19,9 +19,10 @@ export default function Cart(props) {
   });
   return (
     <div id="cart">
-      <h1>cart</h1>
+      {props.cart.length === 0 && <h1>Cart is Empty</h1>}
       {cartJSX}
-      <h1>{props.total}</h1>
+      <br />
+      <h1> Total - {props.total}</h1>
     </div>
   );
 }
