@@ -1,6 +1,13 @@
 export default function Cart(props) {
-  // console.log(props);
-  // console.log(props.cart[0]);
+  let cartTotal = 0;
+  if (props.cart.length !== 0) {
+    cartTotal = props.cart.reduce(
+      (total, cur) => total + cur.price * cur.quantity,
+      0
+    );
+  }
+  console.log(cartTotal);
+  console.log(props.cart);
   const cartJSX = props.cart.map((item) => {
     return (
       <div className="cart-item" key={item.name}>
@@ -22,7 +29,7 @@ export default function Cart(props) {
       {props.cart.length === 0 && <h1>Cart is Empty</h1>}
       {cartJSX}
       <br />
-      <h1> Total - {props.total}</h1>
+      <h1> Total - ${cartTotal}</h1>
     </div>
   );
 }
