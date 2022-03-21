@@ -1,25 +1,13 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import Header from './components/Header';
-import './App.css';
-import Home from './components/Home';
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
-
-import Shop from './components/Shop';
+import "./App.css";
 
 function App() {
-
-
-
- 
-
-
-
   return (
     <div className="App">
-      <Header/>
-      
+      <h1>Hello l</h1>
     </div>
   );
 }
