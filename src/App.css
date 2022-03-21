@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  gap: 10px;
 }
 #display-items > h1 {
   color: blue;
@@ -44,4 +45,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.display-card {
+  border: 3px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.display-card > img {
+  align-self: center;
 }
